@@ -1,10 +1,11 @@
+require('dotenv').config();
 module.exports = {
-  HOST: "localhost",
-  PORT: "3306",
-  USER: "root",
-  PASSWORD: "1hk20cs101",
-  DB: "bezkoder_db",
-  dialect: "mysql",
+  HOST: process.env.DB_HOST,
+  PORT: process.env.DB_PORT,
+  USER: process.env.DB_USER,
+  PASSWORD: process.env.DB_PASSWORD,
+  DB: process.env.DB_NAME,
+  dialect: process.env.DB_DIALECT,
   pool: {
     max: 5,
     min: 0,
